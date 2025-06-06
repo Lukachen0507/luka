@@ -13,7 +13,8 @@ def resume_page():
                 mime="application/octet-stream"
             )
     else:
-
+        st.warning("Resume PDF not found")
+        
     st.markdown("## Chen Xi - Resume")
     st.markdown("""
     ### Contact Information  
