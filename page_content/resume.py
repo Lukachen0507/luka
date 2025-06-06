@@ -4,11 +4,11 @@ import os
 def resume_page():
     # PDF Download
     if os.path.exists("static/docs/CV.pdf"):
-        with open("static/docs/CV.pdf", "rb") as pdf_file:
+        with open("static/docs/resume.pdf", "rb") as pdf_file:
             btn = st.download_button(
                 label="Download Resume",
                 data=pdf_file,
-                file_name="Chen_Xi_CV.pdf",
+                file_name="resume.pdf",
                 mime="application/octet-stream"
             )
     else:
