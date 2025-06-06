@@ -12,9 +12,12 @@ def home_page():
     - **Email**: [lukachen0507@foxmail.com](mailto:lukachen0507@foxmail.com)  
     - **LinkedIn**: [www.linkedin.com/in/lukachen0507](https://www.linkedin.com/in/lukachen0507)  
     """)
-        # Profile Image (optional)
-    if os.path.exists("static/images/profile.jpg"):
-        image = Image.open("static/images/profile.jpg")
+# Profile Image with Rotation
+    image_path = "static/images/profile.jpg"
+    if os.path.exists(image_path):
+        image = Image.open(image_path)
+        # Rotate the image 180 degrees to fix upside-down orientation
+        image = image.rotate(180)
         st.image(image, width=200)
     else:
         st.warning("Profile image not found")
